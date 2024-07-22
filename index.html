@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Parking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de Parking</h1>
+    <div class="form-group">
+        <label for="vehicleType">Tipo de Vehículo:</label>
+        <select id="vehicleType">
+            <option value="car">Carro</option>
+            <option value="motorcycle">Moto</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="plateNumber">Número de Placa:</label>
+        <input type="text" id="plateNumber" required>
+    </div>
+    <button class="button" onclick="registerEntry()">Registrar Ingreso</button>
+    <div class="result" id="entryDetails"></div>
+
+    <h2>Registrar Salida</h2>
+    <div class="form-group">
+        <label for="plateNumberExit">Número de Placa:</label>
+        <input type="text" id="plateNumberExit" required>
+    </div>
+    <button class="button" onclick="registerExit()">Registrar Salida</button>
+    <div class="result" id="exitDetails"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
