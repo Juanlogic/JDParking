@@ -3,34 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Parking</title>
+    <title>ParkingSon System</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Registro de Parking</h1>
-    <div class="form-group">
-        <label for="vehicleType">Tipo de Vehículo:</label>
-        <select id="vehicleType">
-            <option value="car">Carro</option>
-            <option value="motorcycle">Moto</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="plateNumber">Número de Placa:</label>
-        <span>Hijueputa</span>span></span>
-        <input type="text" id="plateNumber" required>
-    </div>
-    <button class="button" onclick="registerEntry()">Registrar Ingreso</button>
-    <div class="result" id="entryDetails"></div>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h1>ParkingSon System</h1>
+                <p class="subtitle">Ingresa los datos de tu vehículo para registrar su entrada.</p>
 
-    <h2>Registrar Salida</h2>
-    <div class="form-group">
-        <label for="plateNumberExit">Número de Placa:</label>
-        <input type="text" id="plateNumberExit" required>
-    </div>
-    <button class="button" onclick="registerExit()">Registrar Salida</button>
-    <div class="result" id="exitDetails"></div>
+                <div>
+                    <a href="pages/historialIngresos/index.html">
+                        <button type="button">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>
+                            Historial de Ingresos
+                        </button>
+                    </a>
+                </div>
+            </div>
 
+            <div class="card">
+                <div class="card-content">
+                    <h2>Ingresar un nuevo vehículo</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="plate">Placa del Vehículo</label>
+                            <input type="text" id="plate" placeholder="ABC123">
+                        </div>
+                        <div class="form-group">
+                            <label for="entry-time">Hora de Entrada</label>
+                            <input type="time" id="entry-time">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="driver-name">Nombre del Conductor</label>
+                        <input type="text" id="driver-name" placeholder="John Doe">
+                    </div>
+                    <button type="submit">Registrar Ingreso</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h2>Salida de un vehículo</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="plate">Placa del Vehículo</label>
+                            <input type="text" id="plate" placeholder="ABC123">
+                        </div>
+                    </div>
+                    <button type="submit">Retirar vehículo</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
